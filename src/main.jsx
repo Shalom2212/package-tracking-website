@@ -6,13 +6,13 @@ import App from "./App.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/:address",
+    path: "/",
     element: <App />,
   },
-  {
-    path: "/",
-    element: <h1>Shalom App main js</h1>,
-  },
+  // {
+  //   path: "/",
+  //   element: <h1>Shalom App main js</h1>,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

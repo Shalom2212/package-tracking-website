@@ -4,14 +4,15 @@ import Web3 from "web3";
 
 import PackageTracking from "./pages/PackageTracking";
 import { Abi } from "./abi/Abi";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 //const contractAddress = "0xe7bda8ea624da949cad24ac8dce642e1efa074a3";
 
 function App() {
-  const { address } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const contractAddress = address;
+  const contractAddress = searchParams.get("caddr");
+
   const [web3, setWeb3] = useState();
   const [smartContract, setSmartContract] = useState();
   const [prdouctName, setProductName] = useState();
